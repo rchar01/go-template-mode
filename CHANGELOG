@@ -1,0 +1,7 @@
+2026-01-02  Robert Charusta  <rch-public@posteo.net>
+
+	* go-template-mode.el: Initial release.
+	(go-template-mode): New major mode.
+	(go-template-mode--font-lock-comments): New multiline comment matcher.
+	(go-template-mode-font-lock-keywords): Add font-lock rules for Go
+	template delimiters, variables, keywords, builtins, and basic HTML tags.

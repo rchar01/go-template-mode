@@ -1,0 +1,72 @@
+#+title: go-template-mode
+#+options: toc:t
+
+A lightweight Emacs major mode for editing Go text/template (Go
+templates).
+
+It focuses on fast, incremental font-lock (regex-based) and avoids
+parsers, caches, or heavy hooks.
+
+* Features
+
+- Highlights template delimiters: {{ and }}
+- Highlights $variables
+- Highlights control keywords (if, range, with, ...)
+- Highlights common builtins (printf, len, ...)
+- Highlights multiline template comments: {{/* ... */}}
+- Optional cheap highlighting of simple HTML tag names
+
+* Requirements
+
+- Emacs 28.1+
+
+* Installation
+
+** Manual
+
+1. Put =go-template-mode.el= on your =load-path=.
+2. Add to your init file:
+
+#+begin_src elisp
+(require 'go-template-mode)
+#+end_src
+
+File associations for =.gotmpl=, =.tpl=, and =.tmpl= are provided by the mode.
+
+** With use-package
+
+#+begin_src elisp
+(use-package go-template-mode
+  :load-path "/path/to/repo/"
+  :mode ("\\.\\(gotmpl\\|tpl\\|tmpl\\)\\'" . go-template-mode))
+#+end_src
+
+* Usage
+
+- Open a =.gotmpl=, =.tpl=, or =.tmpl= file to activate the mode.
+- =M-;= uses Go template comment delimiters for convenience: ={{/* ... */}}=
+
+* Helm charts and embedded templates
+
+Helm chart templates often embed Go templates inside YAML (usually under
+a =templates/= directory). For templated YAML (host mode =yaml-mode=),
+consider using the companion minor mode:
+
+- =go-template-helper-mode=: overlays Go template highlighting on top of
+  another major mode (commonly YAML).
+
+In short:
+- Use =go-template-mode= when the buffer is primarily a Go template.
+- Use =go-template-helper-mode= when templates are embedded inside another
+  format (YAML, config files, etc.).
+
+* Limitations
+
+- No indentation engine (intentionally)
+- Regex-based highlighting may miss edge cases or produce false
+  positives
+- Comment matching is lexical; nested comments are not supported
+
+* License
+
+GPL-3.0-or-later. See =COPYING=.

@@ -1,0 +1,31 @@
+
+
+# <type>(optional scope): <short summary>
+#
+# <longer explanation, if necessary, wrapped at 72 chars>
+#
+# Refs: #issue, PR link, etc.
+#
+# --------------------
+# Commit message guidelines:
+# - Use imperative mood (e.g., "add feature" not "added feature")
+# - Subject line ≤ 50 characters
+# - Separate subject from body with a blank line
+# - Wrap body at ~72 characters per line
+# - Explain WHY, not just WHAT
+# - One commit = one logical change
+#
+# Types:
+#   feat:     new feature
+#   fix:      bug fix
+#   docs:     documentation only
+#   style:    formatting, no code change
+#   refactor: code restructure
+#   perf:     performance improvements
+#   test:     add or modify tests
+#   chore:    tooling, build, CI, dependencies
+#
+# Recommended verbs for subject line:
+#   add, remove, fix, update, improve, refactor, use, bump, revert,
+#   document
+#
