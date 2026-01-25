@@ -27,11 +27,11 @@ parsers, caches, or heavy hooks.
 After installing from MELPA, enable it in your init:
 
 #+begin_src elisp
-(use-package go-template-mode
-  :ensure t
-  :mode (("\\.gotmpl\\'" . go-template-mode)
-         ("\\.tpl\\'" . go-template-mode)
-         ("\\.tmpl\\'" . go-template-mode)))
+  (use-package go-template-mode
+    :ensure t
+    :mode (("\\.gotmpl\\'" . go-template-mode)
+           ("\\.tpl\\'" . go-template-mode)
+           ("\\.tmpl\\'" . go-template-mode)))
 #+end_src
 
 ** Manual
@@ -40,7 +40,7 @@ After installing from MELPA, enable it in your init:
 2. Add to your init file:
 
 #+begin_src elisp
-(require 'go-template-mode)
+  (require 'go-template-mode)
 #+end_src
 
 File associations for =.gotmpl=, =.tpl=, and =.tmpl= are provided by the mode.
@@ -48,9 +48,9 @@ File associations for =.gotmpl=, =.tpl=, and =.tmpl= are provided by the mode.
 ** With use-package (local checkout)
 
 #+begin_src elisp
-(use-package go-template-mode
-  :load-path "/path/to/repo/"
-  :mode ("\\.\\(gotmpl\\|tpl\\|tmpl\\)\\'" . go-template-mode))
+  (use-package go-template-mode
+    :load-path "/path/to/repo/"
+    :mode ("\\.\\(gotmpl\\|tpl\\|tmpl\\)\\'" . go-template-mode))
 #+end_src
 
 * Usage
