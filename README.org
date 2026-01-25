@@ -22,6 +22,18 @@ parsers, caches, or heavy hooks.
 
 * Installation
 
+** From MELPA
+
+After installing from MELPA, enable it in your init:
+
+#+begin_src elisp
+(use-package go-template-mode
+  :ensure t
+  :mode (("\\.gotmpl\\'" . go-template-mode)
+         ("\\.tpl\\'" . go-template-mode)
+         ("\\.tmpl\\'" . go-template-mode)))
+#+end_src
+
 ** Manual
 
 1. Put =go-template-mode.el= on your =load-path=.
@@ -33,7 +45,7 @@ parsers, caches, or heavy hooks.
 
 File associations for =.gotmpl=, =.tpl=, and =.tmpl= are provided by the mode.
 
-** With use-package
+** With use-package (local checkout)
 
 #+begin_src elisp
 (use-package go-template-mode
